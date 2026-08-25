@@ -1,11 +1,13 @@
+---
+name: daily-checkin
+description: Morning briefing and day planning. Use when the user says "good morning", starts their day, asks about today's priorities, or wants to plan the day. Defaults to a display-only briefing (calendar, due and overdue items, yesterday's carries, team flags); creates the daily note in reviews/daily/ only after the user explicitly confirms. For a bare agenda with no plan, use calendar instead.
+argument-hint: "[create]"
+allowed-tools: Read, Glob, Grep, AskUserQuestion, mcp__claude_ai_Google_Calendar__list_events, mcp__claude_ai_Google_Calendar__get_event, TaskCreate, TaskList, TaskUpdate
+---
+
 # /daily-checkin
 
-Use when user says good morning, starts their day, asks about today's priorities, mentions daily check-in, or wants to plan their day.
-
----
-allowed-tools: Read, Write, Glob, Grep, AskUserQuestion, mcp__claude_ai_Google_Calendar__list_events, mcp__claude_ai_Google_Calendar__get_event, TaskCreate, TaskList, TaskUpdate
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 **Optional MCP:** the calendar pull uses the Google Calendar MCP (check with `/mcp`). Without it, everything else still works — just paste your agenda when asked. The session task list (Step 8) uses the TaskCreate/TaskList/TaskUpdate harness tools; if they're unavailable, skip Step 8 and note it.
 

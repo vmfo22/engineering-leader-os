@@ -1,11 +1,13 @@
+---
+name: calendar
+description: Show today's or this week's calendar as a clean agenda - conflicts, meeting hours, estimated focus time. Use when the user asks what's on their calendar or schedule, "what does my day look like", or about free/focus time. Display-only; pulls events via the Google Calendar MCP, or formats a pasted agenda without it. For the full morning briefing with tasks and flags, use daily-checkin instead.
+argument-hint: "[today | week]"
+allowed-tools: Read, mcp__claude_ai_Google_Calendar__list_events, mcp__claude_ai_Google_Calendar__get_event
+---
+
 # /calendar
 
-Show your calendar for today or the week, parsed into a clean summary with conflicts and focus-time.
-
----
-allowed-tools: Read, mcp__claude_ai_Google_Calendar__list_events, mcp__claude_ai_Google_Calendar__get_event
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 **Requires:** Google Calendar MCP (connected + authenticated). Check with `/mcp`. If it's not connected, this skill can't pull events — paste your agenda and Claude will format it instead.
 

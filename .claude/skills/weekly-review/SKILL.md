@@ -1,10 +1,12 @@
+---
+name: weekly-review
+description: End-of-week ritual - reads the week's daily notes, goals, team health, and initiatives, runs the 9-domain scan and connection check, forces at least two cuts for next week, and writes reviews/weekly/YYYY-Www.md. Run as /weekly-review on Friday. A time-allocation audit is leverage-audit; the monthly synthesis is monthly-review.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /weekly-review
 
-Use when user asks for a weekly review, weekly summary, end-of-week reflection, "how did this week go", or mentions weekly wrap-up. Also triggers when user says "let's close the week."
-
----
-allowed-tools: Read, Write, Glob, Grep, AskUserQuestion
----
+User input: $ARGUMENTS
 
 ## Instructions
 

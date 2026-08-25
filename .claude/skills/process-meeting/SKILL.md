@@ -1,17 +1,18 @@
+---
+name: process-meeting
+description: Turn a meeting transcript into structured vault updates - action items, decisions, carries with week counts, person-file entries, inbox additions - confirming every write first. Use when the user pastes a transcript, says "process this meeting", mentions a Granola or Gemini transcript, or says "update [person]'s file" after a 1:1. Prep beforehand belongs to prep-meeting or prep-1on1.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /process-meeting
 
-Use when user pastes a meeting transcript, says "process this meeting", mentions Granola or Gemini transcript, wants to extract action items from a conversation, or says "update [person]'s file" after a 1:1.
-
----
-allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## Instructions
 
 When the user invokes `/process-meeting`, follow these steps.
 
-If $ARGUMENTS contains context (e.g., "1:1 with Alex"), use it. Otherwise, ask.
+If the user input above contains context (e.g., "1:1 with Alex"), use it. Otherwise, ask.
 
 ### Step 1: Get the transcript
 
@@ -20,7 +21,7 @@ If the user has already pasted text, use it. Otherwise, ask:
 
 ### Step 2: Identify meeting context
 
-Ask (skip any already answered via $ARGUMENTS or inferrable from the transcript):
+Ask (skip any already answered via the user input above or inferrable from the transcript):
 1. **Who was in the meeting?** (names — will match to `@Name.md` files in `people/`)
 2. **What type?** (1:1 / group sync / staff / skip-level / external)
 3. **Date?** (default to today if not specified)

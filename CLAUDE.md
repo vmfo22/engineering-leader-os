@@ -85,12 +85,19 @@ Use `/calendar` (or `/calendar today` / `/calendar week`) to pull and format you
 
 ### Weekly Operations
 
-**Generate weekly review:**
+**Generate weekly review — `/weekly-review`:**
 ```
 Read all daily check-ins from the past 7 days in reviews/daily/.
-Read my 90-day goals and team health tracker.
-Create a new weekly review at reviews/weekly/YYYY-Www.md.
-Include: what moved the needle, noise, time leaks, strategic insight, team health pulse.
+Read my 90-day goals, team health tracker, and initiatives dashboard.
+Create a new weekly review at reviews/weekly/YYYY-Www.md — what moved the needle,
+what was noise, the 9-domain scan, the connection check, and at least two things
+to cut next week.
+```
+
+**Audit where my time went — `/leverage-audit`:**
+```
+Two-week time allocation vs the role's ideal mix, plus delegation candidates,
+automation candidates, and energy drains. Display-only; offers to save.
 ```
 
 ### Monthly Operations
@@ -117,18 +124,27 @@ At the end, suggest updates to memory.md.
 
 ### Writing Tasks
 
-**Draft any message/document:**
+**Draft any message/document — `/draft-message`:**
 ```
 Read writing_style.md first.
 Draft a [email/slack message/document] to [audience] about [topic].
 Match my voice exactly. No AI smell.
 ```
 
-**Review something I wrote:**
+**Review something I wrote — `/draft-message`:**
 ```
 Read writing_style.md.
 Review this draft and flag anything that doesn't sound like me.
 Suggest edits that match my voice.
+```
+
+### Decisions
+
+**Log a decision — `/log-decision`:**
+```
+Capture it in decisions/decision_log.md — options considered, rationale, risks,
+one-way vs two-way door, and a review date. Offers a standalone ADR for
+significant ones.
 ```
 
 ### Task Capture
@@ -279,4 +295,4 @@ SORT file.cday DESC
 
 ---
 
-*Last updated: {{date}}*
+*Last updated: [DATE]*

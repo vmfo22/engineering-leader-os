@@ -1,10 +1,12 @@
+---
+name: monthly-review
+description: End-of-month synthesis - reads the month's weekly reviews and daily notes, runs the deep 9-domain scan (People / Direction / Execution), and writes reviews/monthly/YYYY-MM.md with goal progress, team health trends, and the month's top 3 concerns. Run as /monthly-review in the last days of the month.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /monthly-review
 
-Use when user asks for a monthly review, monthly summary, end-of-month reflection, "how did this month go", or mentions monthly wrap-up.
-
----
-allowed-tools: Read, Write, Glob, Grep, AskUserQuestion
----
+User input: $ARGUMENTS
 
 ## Instructions
 

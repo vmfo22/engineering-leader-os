@@ -1,11 +1,12 @@
+---
+name: prep-meeting
+description: Prep for any meeting the user attends or runs, except 1:1s - staff, reviews, leadership and peer syncs, decision forums, vendor, strategy. Pulls the calendar invite (agenda, attendees) and pre-reads (Google Docs/Slides, Confluence, Jira, URLs, pasted text), cross-references the user's stance from the vault, and returns a briefing: what's on the table, where it gets contested, the sharpest questions - or the agenda, roster check, and close plan when the user runs it. Use for "prep me for [meeting]" or digesting pre-reads. Display-only. 1:1s go to prep-1on1; post-meeting transcripts to process-meeting.
+allowed-tools: Read, Glob, Grep, AskUserQuestion, mcp__claude_ai_Google_Calendar__list_events, mcp__claude_ai_Google_Calendar__get_event, mcp__claude_ai_Google_Drive__search_files, mcp__claude_ai_Google_Drive__get_file_metadata, mcp__claude_ai_Google_Drive__read_file_content, mcp__claude_ai_Google_Drive__download_file_content, mcp__atlassian__getConfluencePage, mcp__atlassian__searchConfluenceUsingCql, mcp__atlassian__getJiraIssue
+---
+
 # /prep-meeting
 
-Use to prepare for a meeting — one you're **attending** or one you're **running**: staff, EM working sessions, reviews, decision forums, leadership/peer syncs, vision or vendor meetings. Digests any pre-reads (Google Docs/Slides, Confluence, Jira, PDFs, URLs, pasted text), pulls the **agenda + attendees** from the calendar invite, cross-references your known stance from the vault, and hands back a role- and type-aware briefing: what's on the table, your stance, where it'll get contested, your sharpest questions — and, if you're running it, the agenda, roster check, and a close plan. Display-only. **Not** for 1:1s (that's `/prep-1on1`) or post-meeting transcripts (that's `/process-meeting`).
-
----
-allowed-tools: Read, Glob, Grep, AskUserQuestion, WebFetch, mcp__claude_ai_Google_Calendar__list_events, mcp__claude_ai_Google_Calendar__get_event, mcp__claude_ai_Google_Drive__search_files, mcp__claude_ai_Google_Drive__get_file_metadata, mcp__claude_ai_Google_Drive__read_file_content, mcp__claude_ai_Google_Drive__download_file_content, mcp__atlassian__getConfluencePage, mcp__atlassian__searchConfluenceUsingCql, mcp__atlassian__getJiraIssue
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## What this is
 

@@ -1,11 +1,12 @@
+---
+name: draft-message
+description: Draft or review written communication in the user's own voice from writing_style.md. Use when the user wants to write, draft, compose, or edit an email, Slack message, document, or self-assessment, or says "help me write", "how should I say this", or "review this draft". Recap and agenda posts for the configured decision forum belong to decision-forum.
+allowed-tools: Read, AskUserQuestion
+---
+
 # /draft-message
 
-Use when user wants to write, draft, compose, or edit an email, Slack message, document, self-assessment, or any written communication. Also triggers on "help me write", "how should I say", or "review this draft."
-
----
-allowed-tools: Read, Write, AskUserQuestion
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## Instructions
 
@@ -15,7 +16,7 @@ When the user invokes `/draft-message`, follow these steps:
 ALWAYS read `writing_style.md` first. This is non-negotiable. The goal is to produce writing indistinguishable from what the user would write themselves.
 
 ### Step 2: Gather context
-If $ARGUMENTS contains enough information, proceed. Otherwise, ask the user:
+If the user input above contains enough information, proceed. Otherwise, ask the user:
 - **Who is the audience?** (team, executives, peers, external partners)
 - **What is the channel?** (email, Slack, document)
 - **What is the topic/purpose?**
