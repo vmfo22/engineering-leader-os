@@ -1,11 +1,12 @@
+---
+name: leverage-audit
+description: Two-week time-allocation audit - where time actually went versus the role's ideal mix, plus delegation candidates, automation candidates, and energy drains. Use when the user asks where their time goes, mentions calendar health or delegation, says "my calendar is broken" or "I'm in too many meetings", or wants a leverage or time audit. Display-only; offers to save. The end-of-week ritual is weekly-review.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /leverage-audit
 
-Use when user asks about time allocation, where their time goes, calendar health, delegation opportunities, energy drains, or says "my calendar is broken", "I'm in too many meetings", or wants a leverage/time audit.
-
----
-allowed-tools: Read, Glob, Grep, AskUserQuestion
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## Instructions
 

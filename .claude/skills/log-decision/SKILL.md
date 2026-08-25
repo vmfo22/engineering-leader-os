@@ -1,17 +1,18 @@
+---
+name: log-decision
+description: Capture a decision into decisions/decision_log.md - options considered, rationale, risks, one-way/two-way door type, review date - and optionally a standalone ADR. Use when the user says they made a decision, "I decided", "we agreed", wants to log or record a decision, or asks for an ADR. If the decision was only mentioned in passing, offer before starting. Decisions inside a pasted transcript are process-meeting's job.
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /log-decision
 
-Use when user says they made a decision, wants to log/record/capture a decision, mentions "I decided", "we agreed", or wants to create an ADR. Also triggers on "should I document this decision."
-
----
-allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## Instructions
 
 When the user invokes `/log-decision`, follow these steps.
 
-If $ARGUMENTS contains a brief description of the decision, use it as a starting point. Otherwise, ask.
+If the user input above contains a brief description of the decision, use it as a starting point. Otherwise, ask.
 
 ### Step 1: Load context
 
@@ -22,7 +23,7 @@ Read these files in parallel:
 
 ### Step 2: Gather the decision
 
-Ask the user these 5 questions (adapt if $ARGUMENTS already answers some):
+Ask the user these 5 questions (adapt if the user input above already answers some):
 
 1. **What's the decision?** — One clear sentence.
 2. **What options did you consider?** — At least 2 options, with brief pros/cons.
@@ -108,7 +109,7 @@ If a decision pattern was flagged from memory.md, mention it:
 
 ## Quick Mode
 
-If the user provides enough context in $ARGUMENTS (e.g., `/log-decision promoted X to senior, chose over Y because Z`), skip the interactive questions. Extract what you can, ask only for what's missing (usually: options considered, risks, review date).
+If the user provides enough context in the user input above (e.g., `/log-decision promoted X to senior, chose over Y because Z`), skip the interactive questions. Extract what you can, ask only for what's missing (usually: options considered, risks, review date).
 
 ---
 

@@ -1,15 +1,17 @@
+---
+name: decision-forum
+description: Lifecycle automation for the recurring decision forum defined in this skill's config.json - post-meeting wrap, mid-cycle owner pings, prep, and a final agenda, with action-item aging, an agenda cap, and a carry limit that kills stale items. Run as /decision-forum [mode]. Generic meeting prep belongs to prep-meeting; transcripts to process-meeting.
+argument-hint: "post-meeting | midcycle | prep | agenda"
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /decision-forum
 
-Use when the user mentions your recurring cross-functional decision forum (architecture review, design review, cross-team sync, etc.), references attendees by their configured roles, or says "post-meeting", "midcycle", "prep", or "agenda" in the context of the forum.
-
----
-allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## Instructions
 
-When the user invokes `/decision-forum`, determine the mode from $ARGUMENTS:
+When the user invokes `/decision-forum`, determine the mode from the user input above:
 
 - **`post-meeting`** or **`post`** → Post-Meeting Wrap (run day of or day after meeting)
 - **`midcycle`** or **`check`** → Mid-Cycle Check (run day 7, between meetings)

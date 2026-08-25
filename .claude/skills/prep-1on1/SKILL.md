@@ -1,11 +1,13 @@
+---
+name: prep-1on1
+description: Prep for a 1:1 or skip-level with a specific person - open action items, carries aged 3+ weeks, recent wins, feedback owed, team health, and 2-3 suggested questions, built from their file in people/. Use when the user wants to prep a 1:1, says "prep for [name]", or asks what's open with a direct report or skip-level. Display-only. Every other meeting type belongs to prep-meeting.
+argument-hint: "[person name]"
+allowed-tools: Read, Glob, Grep, AskUserQuestion
+---
+
 # /prep-1on1
 
-Use when user wants to prepare for a 1:1, mentions an upcoming 1:1, says "prep for [name]", "meeting with [name]", or asks about open items for a direct report or skip-level.
-
----
-allowed-tools: Read, Write, Glob, Grep, AskUserQuestion
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 ## Instructions
 
@@ -14,7 +16,7 @@ When the user invokes `/prep-1on1 [Person Name]`, follow these steps:
 ### Step 1: Find the person file
 Search for the person file in `people/` folder matching the name provided. The format is `@FirstName LastName.md`.
 
-If no name is provided in $ARGUMENTS, ask the user which direct report they're meeting with.
+If no name is provided in the user input above, ask the user which direct report they're meeting with.
 
 ### Step 2: Read person context
 Read the person file to understand:

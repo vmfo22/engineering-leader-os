@@ -533,4 +533,4 @@ Four skills. Eight areas addressed. The order matters — Priority 1 unlocks eve
 
 ---
 
-*Last updated: {{date}}*
+*Last updated: [DATE]*

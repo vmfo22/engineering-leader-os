@@ -1,17 +1,19 @@
+---
+name: execution-review
+description: Delivery review against the execution tracker, with optional Jira sync - stage movement, at-risk features, risk register, cross-team dependencies, and 3-5 actions for the week. Run as /execution-review for the full portfolio, with a feature name or Jira ID for a deep-dive, or with a filter (at-risk, definition, a team name) for a slice. Meeting prep itself belongs to prep-meeting.
+argument-hint: "[full | feature/ID | at-risk | definition | development | cross-team | team name]"
+allowed-tools: Read, Glob, Grep, AskUserQuestion, mcp__atlassian__getJiraIssue, mcp__atlassian__searchJiraIssuesUsingJql
+---
+
 # /execution-review
 
-Use when user asks about initiative status, feature progress, tracker review, Jira sync, delivery health, portfolio status, or wants to prepare for a leadership review or upward update. Also triggers on "how are we tracking", "what's at risk", or questions about delivery outcomes.
-
----
-allowed-tools: Read, Write, Edit, Glob, Grep, AskUserQuestion, mcp__atlassian__getJiraIssue, mcp__atlassian__getAccessibleAtlassianResources, mcp__atlassian__searchJiraIssuesUsingJql
-arguments: $ARGUMENTS
----
+User input: $ARGUMENTS
 
 **Requires:** Atlassian MCP (Jira) for the sync steps — check with `/mcp`. Without it, the skill still runs on the tracker alone; it just skips the Jira comparison (say so rather than failing). Set your Jira cloud ID + project key in this skill's `config.json`, and point `tracker_path` at your delivery tracker (default: `initiatives/execution_tracker.md` — copy `initiatives/execution_tracker.md`'s structure to start).
 
 ## Instructions
 
-When the user invokes `/execution-review`, determine the mode from $ARGUMENTS:
+When the user invokes `/execution-review`, determine the mode from the user input above:
 
 - **No arguments** or `full` → Full Tracker Review (all features)
 - **A feature name or number** (e.g., `[Feature Name]`, `#15`, `PROJ-123`) → Initiative Deep-Dive
@@ -98,7 +100,7 @@ After all updates are written, append a one-line summary to this skill's `execut
 For a single initiative, run a focused review.
 
 ### Step 1: Identify the initiative
-Match $ARGUMENTS against the tracker — by name, number, or Jira ID. If ambiguous, ask the user.
+Match the user input above against the tracker — by name, number, or Jira ID. If ambiguous, ask the user.
 
 Read the initiative's row from the tracker (config.json `tracker_path`, default `initiatives/execution_tracker.md`).
 
