@@ -1,0 +1,39 @@
+# ── Always ignored: churn and local state, never wanted in git ──
+
+# Obsidian.
+# .trash/ is where Obsidian moves deleted notes rather than removing them.
+# Plugin data.json can hold API keys. workspace.json changes constantly.
+.trash/
+.obsidian/workspace*.json
+.obsidian/cache
+.obsidian/plugins/*/data.json
+
+# Claude Code local settings and runtime logs.
+# Logs append on every run and conflict on every pull.
+.claude/settings.local.json
+.claude/skills/**/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.idea/
+.vscode/
+
+
+# ── Your decision: source documents in uploads/ ──
+#
+# uploads/ holds documents you were given rather than notes you wrote —
+# performance reviews about named reports, HR material, past annual reviews.
+#
+# Versioning them is reasonable: it's your private repo and they're the
+# context behind your notes. The one asymmetry worth thinking about is that
+# a leak of your memory.md is your problem, while a leak of a review about
+# a named report is that person's problem.
+#
+# Uncomment to keep them out of git entirely:
+#
+# uploads/**
+# !uploads/**/
+# !uploads/**/.gitkeep

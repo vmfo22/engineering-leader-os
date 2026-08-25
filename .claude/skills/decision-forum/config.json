@@ -1,0 +1,14 @@
+{
+  "forum_name": "[Forum Name]",
+  "cadence": "[e.g. bi-weekly]",
+  "meeting_cadence_days": 14,
+  "meeting_file_path": "meetings/[your-forum-slug].md",
+  "slack_channel": "#[your-channel]",
+  "max_agenda_items": 3,
+  "carry_threshold": 2,
+  "attendees": [
+    "[Role 1 — e.g. Architect]",
+    "[Role 2 — e.g. Design Lead]",
+    "[Role 3 — e.g. PM]"
+  ]
+}

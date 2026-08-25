@@ -1,0 +1,4 @@
+{
+  "timezone": "[YOUR_TIMEZONE]",
+  "template_path": "reviews/daily/_template.md"
+}

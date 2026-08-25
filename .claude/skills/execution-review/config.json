@@ -1,0 +1,5 @@
+{
+  "jira_cloud_id": "[YOUR_JIRA_CLOUD_ID]",
+  "tracker_path": "initiatives/execution_tracker.md",
+  "jira_project_key": "[YOUR_PROJECT_KEY]"
+}
