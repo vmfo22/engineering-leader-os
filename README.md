@@ -83,7 +83,7 @@ MCP servers connect Claude to your calendar, Jira, and Slack. Everything works w
 
 ## Quick Start
 
-Steps 1-3 get you running in about 10 minutes. The bootstrap in step 4 adds around 30. Personalizing the core files by hand instead takes closer to two hours.
+Steps 1-3 get you running in about 10 minutes. Step 4 adds around 30, whether you run the bootstrap or fill the core files in by hand.
 
 ### 1. Get your own copy
 
@@ -128,7 +128,7 @@ If you prefer to do it manually, here are the core files:
 
 #### Manual alternative — personalize core files by hand
 
-These are the files that make the system yours. Spend 10-15 minutes on each:
+These are the files that make the system yours — about half an hour end to end:
 
 | File | What to do | Time |
 |------|-----------|------|
