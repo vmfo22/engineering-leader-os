@@ -75,13 +75,15 @@ MCP servers connect Claude to your calendar, Jira, and Slack. Everything works w
 
 ## Choose Your Setup Path
 
-**[Version-controlled setup](#quick-start-15-minutes)** — the default, below. Your vault becomes a private Git repository, so you get history: every daily note, every revision of `memory.md`, diffable. Requires a GitHub account and basic Git.
+**[Version-controlled setup](#quick-start)** — the default, below. Your vault becomes a private Git repository, so you get history: every daily note, every revision of `memory.md`, diffable. Requires a GitHub account and basic Git.
 
 **[Setup without Git](SETUP-WITHOUT-GIT.md)** — download the template as a ZIP, keep it in a synced cloud folder, and use the Claude desktop app. No GitHub account, no Git commands, no terminal. You trade version history for cloud backup.
 
 ---
 
-## Quick Start (15 minutes)
+## Quick Start
+
+Steps 1-3 get you running in about 10 minutes. Step 4 adds around 30, whether you run the bootstrap or fill the core files in by hand.
 
 ### 1. Get your own copy
 
@@ -126,7 +128,7 @@ If you prefer to do it manually, here are the core files:
 
 #### Manual alternative — personalize core files by hand
 
-These are the files that make the system yours. Spend 10-15 minutes on each:
+These are the files that make the system yours — about half an hour end to end:
 
 | File | What to do | Time |
 |------|-----------|------|

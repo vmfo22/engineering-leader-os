@@ -2,7 +2,7 @@
 
 Set up Engineering Leader OS without a GitHub account, without Git, and without a terminal. You download the template as a ZIP file, keep it in a cloud-synced folder for backup, and run it through the Claude desktop app.
 
-This path is for you if you want the system but don't work with Git day to day. If you're comfortable with Git, use the [version-controlled setup](README.md#quick-start-15-minutes) instead — it gives you history you can diff, which this path doesn't.
+This path is for you if you want the system but don't work with Git day to day. If you're comfortable with Git, use the [version-controlled setup](README.md#quick-start) instead — it gives you history you can diff, which this path doesn't.
 
 **Time:** about 30 minutes, most of it downloads and sign-ins.
 
